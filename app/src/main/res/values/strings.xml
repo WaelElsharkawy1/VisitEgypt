@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">VisitEgypt</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="city">Places</string>
+    <string name="hotels">Hotels</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="cairo">Cairo</string>
+    <string name="egypt_s_capital_with_egyption_museum_artifacts_plus_the_pyramids_of_giza_g_great_sphinx_monument">Egypt\'s capital with Egyption Museum artifacts, plus the Pyramids of Giza G Great Sphinx monument</string>
+    <string name="price">price</string>
+    <string name="home">Home</string>
+    <string name="destinations">Destinations</string>
+    <string name="things_to_do">Things to do</string>
+    <string name="day_plans">Day Plans</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="about_us">About us</string>
+</resources>
