@@ -35,17 +35,16 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         simpleList = view.findViewById(R.id.list_items);
-        PlacesList.add(new Places("Alexandria","Alexandria is a Mediterranean port city in Egypt. During the Hellenistic period, it was home to a lighthouse ranking among the Seven Wonders of the Ancient World as well as a storied library. Today the library is reincarnated in the disc-shaped, ultramodern Bibliotheca Alexandrina.",R.drawable.alexandria));
-        PlacesList.add(new Places("Cairo","Capital of Egypt\n" +
-                "Cairo, Egypt’s sprawling capital, is set on the Nile River. At its heart is Tahrir Square and the vast Egyptian Museum",R.drawable.cairo));
-        PlacesList.add(new Places("Giza","Giza is a year-round destination. A popular time to visit is Aug, the height of summer.",R.drawable.giza));
-        PlacesList.add(new Places("Aswan","Aswan, a city on the Nile River, has been southern Egypt’s strategic and commercial gateway since antiquity. It contains significant archaeological sites like the Philae temple complex, on Agilkia Island near the landmark Aswan Dam.",R.drawable.aswan));
+        PlacesList.add(new Places(getString(R.string.alexandria),getString(R.string.alex_desc),R.drawable.alexandria));
+        PlacesList.add(new Places(getString(R.string.cairo),getString(R.string.cairo_desc),R.drawable.cairo));
+        PlacesList.add(new Places(getString(R.string.giza),getString(R.string.giza_desc),R.drawable.giza));
+        PlacesList.add(new Places(getString(R.string.aswan),getString(R.string.aswan_desc),R.drawable.aswan));
         CustomHomeAdapter myAdapter = new CustomHomeAdapter(getContext(), R.layout.row_home_layout, PlacesList);
         simpleList.setAdapter(myAdapter);
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), "This click Will move to an Activity that show more details about That City", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), R.string.toast_homefragment, Toast.LENGTH_LONG).show();
             }
         });
         return view;

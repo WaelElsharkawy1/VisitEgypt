@@ -35,10 +35,10 @@ public class HotelsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hotels, container, false);
         simpleList = view.findViewById(R.id.list_places);
-        HotelList.add(new Hotel("Pharaohs Hotel","50 $ per night","A great hotel in the middle of cairo",R.drawable.pharaohshotel));
-        HotelList.add(new Hotel("Pharaohs Hotel","50 $ per night","A great hotel in the middle of cairo",R.drawable.pharaohshotel));
-        HotelList.add(new Hotel("Steigenberger Hotels","90 $ per night","A great hotel in the middle of cairo",R.drawable.steigenberghotels));
-        HotelList.add(new Hotel("Steigenberger Hotels","90 $ per night","A great hotel in the middle of cairo",R.drawable.steigenberghotels));
+        HotelList.add(new Hotel(getString(R.string.pharaohs_hotel),getString(R.string.price_pharos),getString(R.string.hotel_desc),R.drawable.pharaohshotel));
+        HotelList.add(new Hotel(getString(R.string.pharaohs_hotel),getString(R.string.price_pharos),getString(R.string.hotel_desc),R.drawable.pharaohshotel));
+        HotelList.add(new Hotel(getString(R.string.steigenberger_hotel),getString(R.string.price_steig),getString(R.string.hotel_desc),R.drawable.steigenberghotels));
+        HotelList.add(new Hotel(getString(R.string.steigenberger_hotel),getString(R.string.price_steig),getString(R.string.hotel_desc),R.drawable.steigenberghotels));
 
 
         HotelAdapter myAdapter = new HotelAdapter(getContext(), R.layout.row_hotel_layout, HotelList);
@@ -46,7 +46,7 @@ public class HotelsFragment extends Fragment {
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), "This click Will move to an Activity that show more details about This Hotel", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.toast_hotelfragment, Toast.LENGTH_SHORT).show();
             }
         });
         return view;

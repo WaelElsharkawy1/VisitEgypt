@@ -33,17 +33,17 @@ public class ResturantFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_resturant, container, false);
         simpleList = view.findViewById(R.id.list_places);
-        RestList.add(new Resturant("zitouni","'Enjoy authentic Egyptian food at Zitouni restaurant, Four Seasons Hotel Cairo at Nile Plaza's 24-hour-a-day restaurant.'",R.drawable.zitouni));
-        RestList.add(new Resturant("Zooba","Food Delivery Like Never Before. Order Your Favourite Food Here! Best Delivery Service. No More Calls. Cash on Delivery. Types: Burger, Pizza, Pasta, Sushi, Kebab, Indian, Thai, Mexican.",R.drawable.zooba));
-        RestList.add(new Resturant("Zooba","Food Delivery Like Never Before. Order Your Favourite Food Here! Best Delivery Service. No More Calls. Cash on Delivery. Types: Burger, Pizza, Pasta, Sushi, Kebab, Indian, Thai, Mexican.",R.drawable.zooba));
-        RestList.add(new Resturant("healthy ","Healthy uses the freshest Egyptian local produce to create simple and flavourful gourmet interpretations of Egyptian street food",R.drawable.healthy));
-        RestList.add(new Resturant("healthy ","Healthy uses the freshest Egyptian local produce to create simple and flavourful gourmet interpretations of Egyptian street food",R.drawable.healthy));
+        RestList.add(new Resturant(getString(R.string.zitouni),getString(R.string.rest_desc),R.drawable.zitouni));
+        RestList.add(new Resturant(getString(R.string.zooba),getString(R.string.rest_desc2),R.drawable.zooba));
+        RestList.add(new Resturant(getString(R.string.zooba),getString(R.string.rest_desc2),R.drawable.zooba));
+        RestList.add(new Resturant(getString(R.string.healthy),getString(R.string.rest_desc3),R.drawable.healthy));
+        RestList.add(new Resturant(getString(R.string.healthy),getString(R.string.rest_desc3),R.drawable.healthy));
         ResturantAdapter myAdapter = new ResturantAdapter(getContext(), R.layout.row_resturant_layout, RestList);
         simpleList.setAdapter(myAdapter);
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), "This click Will move to an Activity that show more details about This Resturant", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.toast_restfragment, Toast.LENGTH_SHORT).show();
             }
         });
         return view;

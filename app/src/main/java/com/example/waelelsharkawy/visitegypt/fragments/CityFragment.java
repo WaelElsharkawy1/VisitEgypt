@@ -36,17 +36,17 @@ public class CityFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_city, container, false);
         simpleList = view.findViewById(R.id.list_places);
-        CityList.add(new City("Pyramids","The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt. As of November 2008, sources cite either 118 or 138 as the number of identified Egyptian pyramids",R.drawable.pyramids));
-        CityList.add(new City("Al-Hussain Mosque","The Al-Hussain Mosque is a mosque built in 1154 The mosque is located in Cairo, Egypt, near the Khan El-Khalili bazaar",R.drawable.huseyi));
-        CityList.add(new City("Azhar park","Its a good place for Relaxing",R.drawable.azharpark));
-        CityList.add(new City("Ibn Tulun Mosque","The Mosque of Ibn Tulun is located in Cairo, Egypt. It is the oldest mosque in the city surviving in its original form, and is the largest mosque in Cairo in terms of land area.",R.drawable.ibntulunmosque));
-        CityList.add(new City("Ibn Tulun Mosque","The Mosque of Ibn Tulun is located in Cairo, Egypt. It is the oldest mosque in the city surviving in its original form, and is the largest mosque in Cairo in terms of land area.",R.drawable.ibntulunmosque));
+        CityList.add(new City(getString(R.string.pyramds),getString(R.string.cityfragmentdesc1),R.drawable.pyramids));
+        CityList.add(new City(getString(R.string.hussain_mosque),getString(R.string.cityfragmentdesc2),R.drawable.huseyi));
+        CityList.add(new City(getString(R.string.azhar_park),getString(R.string.cityfragmentdesc3),R.drawable.azharpark));
+        CityList.add(new City(getString(R.string.tulun_mosque),getString(R.string.cityfragmentdesc4),R.drawable.ibntulunmosque));
+        CityList.add(new City(getString(R.string.tulun_mosque),getString(R.string.cityfragmentdesc4),R.drawable.ibntulunmosque));
         PlacesAdapter myAdapter = new PlacesAdapter(getContext(), R.layout.row_city_layout, CityList);
         simpleList.setAdapter(myAdapter);
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), "This click Will move to an Activity that show more details about That City", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), R.string.toast_cityfragment, Toast.LENGTH_LONG).show();
             }
         });
         return view;

@@ -38,14 +38,14 @@ public class DestnationsFragment extends Fragment {
 
 
         simpleList = view.findViewById(R.id.list_places);
-        PlacesList.add(new Places("Alexandria",R.drawable.alexandria));
-        PlacesList.add(new Places("Cairo",R.drawable.cairo));
-        PlacesList.add(new Places("Ain Sokhna",R.drawable.ain_sokhna));
-        PlacesList.add(new Places("Giza",R.drawable.giza));
-        PlacesList.add(new Places("Aswan",R.drawable.aswan));
-        PlacesList.add(new Places("Sharm Elsheikh",R.drawable.sharm_elsheikh));
-        PlacesList.add(new Places("Luxor",R.drawable.luxor));
-        PlacesList.add(new Places("Suez",R.drawable.suez));
+        PlacesList.add(new Places(getString(R.string.alexandria),"",R.drawable.alexandria));
+        PlacesList.add(new Places(getString(R.string.cairo),"",R.drawable.cairo));
+        PlacesList.add(new Places(getString(R.string.ain_sokhna),"",R.drawable.ain_sokhna));
+        PlacesList.add(new Places(getString(R.string.giza),"",R.drawable.giza));
+        PlacesList.add(new Places(getString(R.string.aswan),"",R.drawable.aswan));
+        PlacesList.add(new Places(getString(R.string.sharm),"",R.drawable.sharmelsheikh));
+        PlacesList.add(new Places(getString(R.string.luxor),"",R.drawable.luxor));
+        PlacesList.add(new Places(getString(R.string.suez),"",R.drawable.suez));
         CustomPlacesAdapter myAdapter = new CustomPlacesAdapter(getContext(), R.layout.row_places_layout, PlacesList);
         simpleList.setAdapter(myAdapter);
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
